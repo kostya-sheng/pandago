@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>China Travel Journal | PandaGo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css"/>
+  <style>
+    header.blog-header {
+      padding: 10rem 4rem 4rem;
+      background: var(--ink);
+      color: #fff;
+      text-align: center;
+    }
+    .header-label { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-lt); margin-bottom: 1.2rem; display: block; }
+    .header-title { font-family: var(--ff-d); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 300; }
+
+    main { padding: 5rem 4rem; max-width: 1200px; margin: 0 auto; }
+    .blog-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:2.5rem; }
+    .blog-card { background: #fff; border: 1px solid var(--border); overflow:hidden; transition: transform 0.3s, box-shadow 0.3s; }
+    .blog-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.05); }
+    .blog-img { width:100%; height:220px; object-fit:cover; display:block; }
+    .blog-body { padding:2rem; }
+    .blog-cat { font-size:0.65rem; letter-spacing:0.24em; text-transform:uppercase; color:var(--red); margin-bottom:0.8rem; display:block; }
+    .blog-title { font-family:var(--ff-d); font-size:1.4rem; font-weight:400; line-height:1.3; color:var(--ink); margin-bottom:0.9rem; }
+    .blog-excerpt { font-size:0.9rem; line-height:1.8; color:var(--muted); margin-bottom: 1.5rem; }
+    .blog-link { display:inline-block; font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--red); text-decoration:none; border-bottom:1px solid var(--border); padding-bottom:2px; }
+    .blog-link:hover { border-color:var(--red); }
+
+    @media(max-width:900px){
+      main { padding:4rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="../index.html#hero">
+    <span class="logo-panda">&#x1F43C;</span>
+    <span class="logo-text">Panda<span>Go</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#why">Why Us</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../index.html#destinations">Destinations</a></li>
+    <li><a href="../index.html#reviews">Reviews</a></li>
+    <li><a href="../index.html#blog">Blog</a></li>
+  </ul>
+  <a class="nav-cta" href="../index.html#contact">Get Started</a>
+</nav>
+
+<header class="blog-header">
+  <span class="header-label">China Travel Journal</span>
+  <h1 class="header-title">Tips, Guides &amp; Insider Knowledge</h1>
+</header>
+
+<main>
+  <div class="blog-grid">
+    <div class="blog-card">
+      <img class="blog-img" src="https://images.unsplash.com/photo-1526129318478-62ed807ebdf9?w=600&q=80" alt="Mobile Payments"/>
+      <div class="blog-body">
+        <span class="blog-cat">Tech &amp; Apps</span>
+        <h3 class="blog-title">Foreigners &amp; Mobile Payments in China: A Complete 2025 Guide</h3>
+        <p class="blog-excerpt">WeChat Pay and Alipay are everywhere &mdash; but setting them up as a foreigner has unique hurdles. Here&rsquo;s exactly how to do it before you land.</p>
+        <a class="blog-link" href="mobile-payments.html">Read More &rarr;</a>
+      </div>
+    </div>
+    
+    <div class="blog-card">
+      <img class="blog-img" src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80" alt="Chinese Food"/>
+      <div class="blog-body">
+        <span class="blog-cat">Food &amp; Dining</span>
+        <h3 class="blog-title">Beyond Kung Pao: What Foreigners Actually Love to Eat in China</h3>
+        <p class="blog-excerpt">A foreigner&rsquo;s honest guide to navigating China&rsquo;s vast culinary landscape &mdash; from street dumplings to regional hotpot, with ordering tips included.</p>
+        <a class="blog-link" href="#">Read More &rarr;</a>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <img class="blog-img" src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=600&q=80" alt="China Culture"/>
+      <div class="blog-body">
+        <span class="blog-cat">Culture &amp; Etiquette</span>
+        <h3 class="blog-title">10 Cultural Dos and Don&rsquo;ts Every Visitor to China Should Know</h3>
+        <p class="blog-excerpt">Avoid unintentional faux pas and connect more deeply with locals. These simple cultural tips make your trip memorable for all the right reasons.</p>
+        <a class="blog-link" href="#">Read More &rarr;</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-logo">
+    <span class="logo-panda">&#x1F43C;</span>
+    <span class="logo-text">Panda<span>Go</span></span>
+  </div>
+  <ul class="footer-links">
+    <li><a href="../index.html#why">Why Us</a></li>
+    <li><a href="../index.html#services">Services &amp; Pricing</a></li>
+    <li><a href="../index.html#destinations">Destinations</a></li>
+    <li><a href="../index.html#reviews">Reviews</a></li>
+    <li><a href="../index.html#blog">Blog</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+  <p class="footer-copy">&copy; 2026 PandaGo. All rights reserved.</p>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.querySelector('nav').style.padding =
+      window.scrollY > 60 ? '0.9rem 4rem' : '1.4rem 4rem';
+  });
+</script>
+</body>
+</html>

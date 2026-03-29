@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shanghai | PandaGo — Your 24/7 China Travel Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css"/>
+  <style>
+    header.dest-hero {
+      height: 60vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--ink);
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?w=1600&q=80') center/cover no-repeat;
+      z-index: 1;
+    }
+    .hero-content { position: relative; z-index: 2; text-align: center; color: #fff; }
+    .hero-title { font-family: var(--ff-d); font-size: clamp(3rem, 8vw, 6rem); font-weight: 300; }
+
+    main { padding: 5rem 4rem; max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.66rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--red); margin-bottom: 0.9rem; display: block; }
+    .dest-intro { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; margin-bottom: 5rem; }
+    .dest-text h2 { font-family: var(--ff-d); font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem; }
+    .dest-text p { font-size: 1.05rem; line-height: 1.9; color: var(--muted); margin-bottom: 1.5rem; }
+    
+    .dest-stats { background: var(--sand); padding: 2rem; border-left: 3px solid var(--red); }
+    .stat-item { margin-bottom: 1.5rem; }
+    .stat-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.3rem; }
+    .stat-value { font-family: var(--ff-d); font-size: 1.4rem; color: var(--ink); }
+
+    .highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 5rem; }
+    .highlight-card { background: #fff; border: 1px solid var(--border); padding: 2rem; }
+    .highlight-card h3 { font-family: var(--ff-d); font-size: 1.5rem; margin-bottom: 1rem; color: var(--red); }
+    .highlight-card p { font-size: 0.9rem; line-height: 1.7; color: var(--muted); }
+
+    @media(max-width:900px){
+      main { padding:4rem 2rem; }
+      .dest-intro { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="../index.html#hero">
+    <span class="logo-panda">&#x1F43C;</span>
+    <span class="logo-text">Panda<span>Go</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#why">Why Us</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../index.html#destinations">Destinations</a></li>
+    <li><a href="../index.html#reviews">Reviews</a></li>
+    <li><a href="../index.html#blog">Blog</a></li>
+  </ul>
+  <a class="nav-cta" href="../index.html#contact">Get Started</a>
+</nav>
+
+<header class="dest-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Shanghai</h1>
+  </div>
+</header>
+
+<main>
+  <div class="dest-intro">
+    <div class="dest-text">
+      <span class="section-label">Experience the Pearl of the Orient</span>
+      <h2>A Vision of Tomorrow</h2>
+      <p>Shanghai is China's most cosmopolitan city, a place where European colonial history and hyper-modern ambition collide. The Bund, with its majestic neoclassical buildings, looks across the Huangpu River to the soaring skyscrapers of Lujiazui, representing the dramatic transformation of the city over the last century.</p>
+      <p>From the luxury boutiques of Nanjing Road to the hidden coffee shops of the former French Concession, Shanghai is a city that never stops moving. It is the perfect entry point for those seeking a blend of international comfort and authentic Chinese culture.</p>
+    </div>
+    <div class="dest-stats">
+      <div class="stat-item">
+        <span class="stat-label">Best Time to Visit</span>
+        <span class="stat-value">Spring (March–May) & Late Autumn (Oct–Nov)</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Must Eat</span>
+        <span class="stat-value">Xiaolongbao (Soup Dumplings), Hairy Crab</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Skyline View</span>
+        <span class="stat-value">Shanghai Tower (Highest in China)</span>
+      </div>
+    </div>
+  </div>
+
+  <span class="section-label">Shanghai Highlights</span>
+  <div class="highlights">
+    <div class="highlight-card">
+      <h3>The Bund</h3>
+      <p>A mile-long promenade along the Huangpu River, the Bund is the architectural heart of old Shanghai. Its 52 buildings of various architectural styles (Gothic, Baroque, Romanesque, Art Deco) offer a glimpse into the city's role as a 19th-century financial hub.</p>
+    </div>
+    <div class="highlight-card">
+      <h3>French Concession</h3>
+      <p>Characterised by tree-lined avenues and European-style architecture, this area is home to fashionable boutiques, art galleries, and some of the city's best cafes. It offers a quieter, more romantic side of the city.</p>
+    </div>
+    <div class="highlight-card">
+      <h3>Lujiazui Skyline</h3>
+      <p>Home to the Oriental Pearl Tower, the Jin Mao Tower, and the Shanghai Tower, this district is the financial engine of the city and offers some of the most spectacular observation decks in the world.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-logo">
+    <span class="logo-panda">&#x1F43C;</span>
+    <span class="logo-text">Panda<span>Go</span></span>
+  </div>
+  <ul class="footer-links">
+    <li><a href="../index.html#why">Why Us</a></li>
+    <li><a href="../index.html#services">Services &amp; Pricing</a></li>
+    <li><a href="../index.html#destinations">Destinations</a></li>
+    <li><a href="../index.html#reviews">Reviews</a></li>
+    <li><a href="../index.html#blog">Blog</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+  <p class="footer-copy">&copy; 2026 PandaGo. All rights reserved.</p>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.querySelector('nav').style.padding =
+      window.scrollY > 60 ? '0.9rem 4rem' : '1.4rem 4rem';
+  });
+</script>
+</body>
+</html>

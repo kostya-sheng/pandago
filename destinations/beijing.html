@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beijing | PandaGo — Your 24/7 China Travel Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css"/>
+  <style>
+    header.dest-hero {
+      height: 60vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--ink);
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1600&q=80') center/cover no-repeat;
+      z-index: 1;
+    }
+    .hero-content { position: relative; z-index: 2; text-align: center; color: #fff; }
+    .hero-title { font-family: var(--ff-d); font-size: clamp(3rem, 8vw, 6rem); font-weight: 300; }
+
+    main { padding: 5rem 4rem; max-width: 1100px; margin: 0 auto; }
+    .dest-intro { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; margin-bottom: 5rem; }
+    .dest-text h2 { font-family: var(--ff-d); font-size: 2.5rem; font-weight: 300; margin-bottom: 1.5rem; }
+    .dest-text p { font-size: 1.05rem; line-height: 1.9; color: var(--muted); margin-bottom: 1.5rem; }
+    
+    .dest-stats { background: var(--sand); padding: 2rem; border-left: 3px solid var(--red); }
+    .stat-item { margin-bottom: 1.5rem; }
+    .stat-label { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.3rem; }
+    .stat-value { font-family: var(--ff-d); font-size: 1.4rem; color: var(--ink); }
+
+    .highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 5rem; }
+    .highlight-card { background: #fff; border: 1px solid var(--border); padding: 2rem; }
+    .highlight-card h3 { font-family: var(--ff-d); font-size: 1.5rem; margin-bottom: 1rem; color: var(--red); }
+    .highlight-card p { font-size: 0.9rem; line-height: 1.7; color: var(--muted); }
+
+    @media(max-width:900px){
+      main { padding:4rem 2rem; }
+      .dest-intro { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="../index.html#hero">
+    <span class="logo-panda">&#x1F43C;</span>
+    <span class="logo-text">Panda<span>Go</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#why">Why Us</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../index.html#destinations">Destinations</a></li>
+    <li><a href="../index.html#reviews">Reviews</a></li>
+    <li><a href="../index.html#blog">Blog</a></li>
+  </ul>
+  <a class="nav-cta" href="../index.html#contact">Get Started</a>
+</nav>
+
+<header class="dest-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Beijing</h1>
+  </div>
+</header>
+
+<main>
+  <div class="dest-intro">
+    <div class="dest-text">
+      <span class="section-label">Experience the Capital</span>
+      <h2>A City Where History Meets the Future</h2>
+      <p>Beijing is a city of layers, where the ancient echoes of the Forbidden City and the Temple of Heaven stand alongside futuristic skyscrapers and the buzzing energy of modern commerce. As the capital of China for over 800 years, it remains the political and cultural heart of the nation.</p>
+      <p>Whether you're hiking the rugged Great Wall at Mutianyu or exploring the narrow hutong alleys where traditional life still unfolds, Beijing offers an unparalleled deep dive into Chinese heritage.</p>
+    </div>
+    <div class="dest-stats">
+      <div class="stat-item">
+        <span class="stat-label">Best Time to Visit</span>
+        <span class="stat-value">Spring (April–May) & Autumn (Sept–Oct)</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Must Eat</span>
+        <span class="stat-value">Peking Duck, Zhajiangmian</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">UNESCO Sites</span>
+        <span class="stat-value">7 Sites in Beijing</span>
+      </div>
+    </div>
+  </div>
+
+  <span class="section-label">Beijing Highlights</span>
+  <div class="highlights">
+    <div class="highlight-card">
+      <h3>The Great Wall</h3>
+      <p>Stretching thousands of miles across northern China, the Great Wall is a testament to human ingenuity. Near Beijing, sections like Mutianyu and Jinshanling offer breathtaking views and a direct link to the Ming Dynasty's defensive architecture.</p>
+    </div>
+    <div class="highlight-card">
+      <h3>The Forbidden City</h3>
+      <p>The world's largest palace complex, this imperial citadel served as the home of 24 emperors. Its 9,999 rooms are filled with treasures, intricate artwork, and centuries of imperial history.</p>
+    </div>
+    <div class="highlight-card">
+      <h3>Hutong Exploration</h3>
+      <p>To see the "real" Beijing, one must enter the hutongs—narrow alleyways formed by lines of traditional courtyard residences. It's here that the city's pulse beats strongest, in the street food stalls and quiet courtyards.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-logo">
+    <span class="logo-panda">&#x1F43C;</span>
+    <span class="logo-text">Panda<span>Go</span></span>
+  </div>
+  <ul class="footer-links">
+    <li><a href="../index.html#why">Why Us</a></li>
+    <li><a href="../index.html#services">Services &amp; Pricing</a></li>
+    <li><a href="../index.html#destinations">Destinations</a></li>
+    <li><a href="../index.html#reviews">Reviews</a></li>
+    <li><a href="../index.html#blog">Blog</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+  <p class="footer-copy">&copy; 2026 PandaGo. All rights reserved.</p>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.querySelector('nav').style.padding =
+      window.scrollY > 60 ? '0.9rem 4rem' : '1.4rem 4rem';
+  });
+</script>
+</body>
+</html>
