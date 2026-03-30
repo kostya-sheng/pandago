@@ -288,28 +288,28 @@
       </div>
     </div>
     <div>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
+      <form class="contact-form" action="https://formspree.io/f/xzdkrpdq" method="POST" onsubmit="handleSubmit(event)">
         <div class="form-row">
           <div class="form-group">
             <label for="fname">First Name</label>
-            <input type="text" id="fname" placeholder="Jane" required/>
+            <input type="text" id="fname" name="first_name" placeholder="Jane" required/>
           </div>
           <div class="form-group">
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" placeholder="Smith" required/>
+            <input type="text" id="lname" name="last_name" placeholder="Smith" required/>
           </div>
         </div>
         <div class="form-group">
           <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="jane@example.com" required/>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required/>
         </div>
         <div class="form-group">
           <label for="nationality">Nationality</label>
-          <input type="text" id="nationality" placeholder="e.g. American, French, Canadian..."/>
+          <input type="text" id="nationality" name="nationality" placeholder="e.g. American, French, Canadian..."/>
         </div>
         <div class="form-group">
           <label for="plan">Plan of Interest</label>
-          <select id="plan">
+          <select id="plan" name="plan">
             <option value="">Select a plan...</option>
             <option>China Survival Kit -- $9.99 / 72 hrs</option>
             <option>Standard -- $49.99 / 7 days</option>
@@ -319,11 +319,11 @@
         </div>
         <div class="form-group">
           <label for="travel-date">Planned Travel Date</label>
-          <input type="text" id="travel-date" placeholder="e.g. June 2025"/>
+          <input type="text" id="travel-date" name="travel_date" placeholder="e.g. June 2025"/>
         </div>
         <div class="form-group">
           <label for="message">Anything Else?</label>
-          <textarea id="message" placeholder="Tell us about your trip, itinerary, or any questions..."></textarea>
+          <textarea id="message" name="message" placeholder="Tell us about your trip, itinerary, or any questions..."></textarea>
         </div>
         <button type="submit" class="btn-primary" style="align-self:flex-start;">Register Now</button>
       </form>
@@ -372,9 +372,38 @@
   function handleSubmit(e) {
     e.preventDefault();
     const btn = e.target.querySelector('button[type="submit"]');
-    btn.textContent = 'Registration Sent!';
-    btn.style.background = '#3a8a5a';
+    const data = new FormData(e.target);
+    
+    btn.textContent = 'Sending...';
     btn.disabled = true;
+
+    fetch(e.target.action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        btn.textContent = 'Registration Sent!';
+        btn.style.background = '#3a8a5a';
+        e.target.reset();
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            alert(data["errors"].map(error => error["message"]).join(", "));
+          } else {
+            alert("Oops! There was a problem submitting your form");
+          }
+          btn.textContent = 'Register Now';
+          btn.disabled = false;
+        })
+      }
+    }).catch(error => {
+      alert("Oops! There was a problem submitting your form");
+      btn.textContent = 'Register Now';
+      btn.disabled = false;
+    });
   }
 </script>
 </body>
