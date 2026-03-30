@@ -85,7 +85,7 @@ section { padding: 7rem 4rem; }
 .plan-tagline { font-size: 0.85rem; line-height: 1.7; color: var(--muted); margin-bottom: 1.6rem; padding-bottom: 1.6rem; border-bottom: 1px solid var(--border); }
 .plan-features { list-style: none; flex: 1; margin-bottom: 2rem; }
 .plan-feature { font-size: 0.84rem; line-height: 1.7; color: var(--muted); padding: 0.45rem 0; }
-.plan-feature::before { content: "CHECK "; color: var(--red); font-weight: 500; }
+.plan-feature::before { content: "✓ "; color: var(--red); font-weight: 500; }
 .plan-cta { display: block; text-align: center; padding: 0.85rem; font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; border: 1px solid var(--red); color: var(--red); transition: background 0.2s, color 0.2s; }
 .plan-cta:hover, .plan-card.featured .plan-cta { background: var(--red); color: #fff; }
 .plan-card.featured .plan-cta:hover { background: var(--red-soft); border-color: var(--red-soft); }
