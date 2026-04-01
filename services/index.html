@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PandaGo – Our Services</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐼</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="../index.html">
+    <span class="logo-panda">&#x1F43C;</span>
+    <span class="logo-text">Panda<span>Go</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#why">Why Us</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="../index.html#destinations">Destinations</a></li>
+    <li><a href="../index.html#reviews">Reviews</a></li>
+    <li><a href="../blog/index.html">Blog</a></li>
+  </ul>
+  <a class="nav-cta" href="../index.html#contact">Get Started</a>
+</nav>
+
+<section id="services-hero" style="position: relative; padding-top: 10rem; text-align: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <span class="section-label">Your Journey, Simplified</span>
+    <h1 class="section-title" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">Explore Our Service Tiers</h1>
+    <p class="section-desc" style="margin: 0 auto 3rem;">From essential safety nets to bespoke luxury concierge services, PandaGo ensures your time in China is seamless, safe, and truly unforgettable.</p>
+  </div>
+</section>
+
+<section id="services" style="padding-top: 0;">
+  <div class="plans-grid" style="max-width: 1200px; margin: 0 auto;">
+    <!-- Survival Kit -->
+    <div class="plan-card">
+      <div class="plan-name">China Survival Kit</div>
+      <div class="plan-price">$9.99</div>
+      <div class="plan-period">for 72 hours</div>
+      <p class="plan-tagline">Your essential safety net for short stays and first-timers who want a helping hand on standby.</p>
+      <ul class="plan-features">
+        <li class="plan-feature">24/7 emergency hotline</li>
+        <li class="plan-feature">App & SIM set-up tutorials</li>
+        <li class="plan-feature">Curated digital guidebooks</li>
+      </ul>
+      <a href="survival-kit.html" class="plan-cta">View Detailed Plan</a>
+    </div>
+
+    <!-- Standard -->
+    <div class="plan-card featured">
+      <div class="plan-badge">Popular Choice</div>
+      <div class="plan-name">Standard Plan</div>
+      <div class="plan-price">$49.99</div>
+      <div class="plan-period">for 7 days</div>
+      <p class="plan-tagline">Your personal assistant for a full week — navigation, bookings, scam alerts, and more.</p>
+      <ul class="plan-features">
+        <li class="plan-feature">Everything in Survival Kit</li>
+        <li class="plan-feature">Personalized Dining Guides</li>
+        <li class="plan-feature">Concierge Booking Service</li>
+        <li class="plan-feature">Safety & Fraud Mitigation</li>
+      </ul>
+      <a href="standard.html" class="plan-cta">View Detailed Plan</a>
+    </div>
+
+    <!-- Premium -->
+    <div class="plan-card">
+      <div class="plan-name">Premium Plan</div>
+      <div class="plan-price">$99.99</div>
+      <div class="plan-period">for 10 days</div>
+      <p class="plan-tagline">Unlimited, fully-managed concierge. Tell us what you want — we make it happen.</p>
+      <ul class="plan-features">
+        <li class="plan-feature">Everything in Standard Plan</li>
+        <li class="plan-feature">Bespoke Itinerary Design</li>
+        <li class="plan-feature">Private Dedicated Agent</li>
+        <li class="plan-feature">Off-the-map Access & Gems</li>
+      </ul>
+      <a href="premium.html" class="plan-cta">View Detailed Plan</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">
+    <span class="logo-panda">&#x1F43C;</span>
+    <span class="logo-text">Panda<span>Go</span></span>
+  </div>
+  <ul class="footer-links">
+    <li><a href="../index.html#why">Why Us</a></li>
+    <li><a href="#services">Services &amp; Pricing</a></li>
+    <li><a href="../index.html#destinations">Destinations</a></li>
+    <li><a href="../index.html#reviews">Reviews</a></li>
+    <li><a href="../blog/index.html">Blog</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+  <p class="footer-copy">&copy; 2026 PandaGo. All rights reserved.</p>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.querySelector('nav').style.padding =
+      window.scrollY > 60 ? '0.9rem 4rem' : '1.4rem 4rem';
+  });
+</script>
+
+</body>
+</html>
