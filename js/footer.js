@@ -4,23 +4,16 @@
  */
 
 function createFooter() {
-  // Determine the base path for links based on current location
-  const pathParts = window.location.pathname.split('/').filter(Boolean);
-  const depth = pathParts.length - 1; // -1 because last part is filename
-  const isRoot = depth === 0 || window.location.pathname.endsWith('/');
+  // Determine if we're in a subdirectory by checking the current pathname
+  const pathname = window.location.pathname;
+  const isInSubdirectory = pathname.includes('/blog/') || 
+                          pathname.includes('/destinations/') || 
+                          pathname.includes('/services/');
   
-  // Calculate relative path prefix
-  let prefix = '';
-  if (depth > 1) {
-    prefix = '../'.repeat(depth - 1);
-  } else if (depth === 1) {
-    prefix = '../';
-  }
-
-  // Determine current section for active link styling
-  const currentPath = window.location.pathname;
+  // Set prefix based on location
+  const prefix = isInSubdirectory ? '../' : '';
   
-  // Create footer HTML
+  // Create footer HTML with correct relative paths
   const footerHTML = `
     <div class="footer-logo">
       <span class="logo-panda">&#x1F43C;</span>
@@ -30,7 +23,7 @@ function createFooter() {
       <li><a href="${prefix}index.html#why">Why Us</a></li>
       <li><a href="${prefix}services/index.html">Services &amp; Pricing</a></li>
       <li><a href="${prefix}index.html#destinations">Destinations</a></li>
-      <li><a href="${prefix}index.html#reviews">Reviews</a></li>
+      <li><a href="${prefix}comments.html">Comments</a></li>
       <li><a href="${prefix}blog/index.html">Blog</a></li>
       <li><a href="${prefix}index.html#contact">Contact</a></li>
     </ul>

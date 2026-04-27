@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <script src="js/footer.js"></script>
+  <script src="js/comments-data.js"></script>
 </head>
 <body>
 
@@ -21,7 +22,7 @@
     <li><a href="#why">Why Us</a></li>
     <li><a href="services/index.html">Services</a></li>
     <li><a href="#destinations">Destinations</a></li>
-    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="comments.html">Comments</a></li>
     <li><a href="blog/index.html">Blog</a></li>
   </ul>
   <a class="nav-cta" href="#contact">Get Started</a>
@@ -203,25 +204,11 @@
   <h2 class="section-title">Real Stories,<br/><em>Real Experiences</em></h2>
   <div class="divider"></div>
   <p class="section-desc">Thousands of international visitors have navigated China with confidence &mdash; thanks to PandaGo.</p>
-  <div class="reviews-grid">
-    <div class="review-card">
-      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="review-text">&ldquo;I was terrified about managing payments and apps in China. PandaGo set everything up within the hour and I never once felt lost. Total game-changer.&rdquo;</p>
-      <div class="review-author">Sarah L.</div>
-      <div class="review-trip">Standard Plan &middot; 7-day Beijing &amp; Shanghai trip</div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="review-text">&ldquo;The restaurant booking service alone was worth the price. They got us into a Michelin spot with zero Mandarin required &mdash; and even ordered for us!&rdquo;</p>
-      <div class="review-author">Marco &amp; Elena R.</div>
-      <div class="review-trip">Premium Plan &middot; 10-day Chengdu &amp; Guilin</div>
-    </div>
-    <div class="review-card">
-      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p class="review-text">&ldquo;The red flag alerts kept us away from a notorious tourist scam in Xi&rsquo;an. Felt like having a knowledgeable local friend in our pocket the whole trip.&rdquo;</p>
-      <div class="review-author">David K.</div>
-      <div class="review-trip">Standard Plan &middot; 7-day Xi&rsquo;an solo trip</div>
-    </div>
+  <div class="reviews-grid" id="random-review-container">
+    <!-- Random review will be inserted here -->
+  </div>
+  <div style="text-align: center; margin-top: 2.5rem;">
+    <a href="comments.html" style="display: inline-block; padding: 0.9rem 2.2rem; border: 2px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.7); font-family: var(--ff-b); font-size: 0.76rem; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: border-color 0.2s, color 0.2s;">View All Comments →</a>
   </div>
 </section>
 
@@ -339,6 +326,33 @@
 <footer></footer>
 
 <script>
+  // Populate random reviews on page load
+  function populateRandomReviews() {
+    const allComments = getAllComments();
+    
+    // Shuffle the array to get random comments
+    const shuffled = [...allComments].sort(() => 0.5 - Math.random());
+    
+    // Take the first 3
+    const selectedComments = shuffled.slice(0, 3);
+    
+    const reviewsHTML = selectedComments.map(comment => {
+      const starsHTML = Array(comment.rating).fill('&#9733;').join('');
+      return `
+        <div class="review-card">
+          <div class="review-stars">${starsHTML}</div>
+          <p class="review-text">&ldquo;${comment.quote}&rdquo;</p>
+          <div class="review-author">${comment.author}</div>
+          <div class="review-trip">${comment.nationality}</div>
+        </div>
+      `;
+    }).join('');
+    
+    document.getElementById('random-review-container').innerHTML = reviewsHTML;
+  }
+
+  populateRandomReviews();
+
   window.addEventListener('scroll', () => {
     document.querySelector('nav').style.padding =
       window.scrollY > 60 ? '0.9rem 4rem' : '1.4rem 4rem';
